@@ -1,0 +1,5 @@
+1. Have some database issues
+2. get useres reviews on products
+3. build zoom images functionalities
+4. complete cart functionality
+5. integrate it some payment gateway

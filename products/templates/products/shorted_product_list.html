@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block extrastyles%}
+<style>
+  .box{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .card .card-body .card-text{
+    overflow: hidden;
+    width: 100%;
+    height: 100px;
+  }
+</style>
+{% endblock %}
+{% block content %}
+<div class="box">
+  {% if products %}
+    <h2>Category</h2>
+      {% for p in products %}
+      <div class="card" style="width: 18rem;margin: 10px 20px;">
+        <a href="{% url 'product:product-detail' pk=p.pk slug=p.slug%}">
+          <img class="card-img-top" src="{{p.image.url}}" alt="Card image cap">
+        </a>
+        <div class="card-body">
+          <h5 class="card-title">{{p.name}}</h5>
+          <p class="card-text">{{p.desc}}</p>
+          <a href="#" class="btn btn-primary">Add To Cart</a>
+        </div>
+      </div>
+      {% endfor %}
+  {% else%}
+    <h1>No Products in category Yet!</h1>
+  {% endif %}
+</div>
+{% endblock %}

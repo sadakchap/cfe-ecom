@@ -1,0 +1,11 @@
+body{
+  background-image: linear-gradient(28deg,#cff,#9586ec);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.contact-page{
+  /* border: 2px solid red; */
+  font-family: 'Acme', sans-serif;
+  padding: 20px 10px;
+  margin: 10px auto;
+}
